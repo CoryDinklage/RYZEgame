@@ -46,6 +46,24 @@ public class ChrisChanger : MonoBehaviour {
         {
             animator.SetBool("leftWalk", false);
         }
+        if (Input.GetKey(KeyCode.S))
+        {
+            animator.SetBool("walkingS", true);
+            //animator.SetBool("walkingW", false);
+        }
+        else
+        {
+            animator.SetBool("walkingS", false);
+        }
+        if (Input.GetKey(KeyCode.D)&&Input.GetKey(KeyCode.W))
+        {
+            animator.SetBool("rightWalk", true);
+            //animator.SetBool("walkingW", false);
+        }
+        else
+        {
+            animator.SetBool("rightWalk", false);
+        }
 
     }
 }
