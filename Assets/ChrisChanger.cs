@@ -89,6 +89,15 @@ public class ChrisChanger : MonoBehaviour {
         {
             animator.SetBool("pistolShoot", false);
         }
-
+        if (Input.GetKey(KeyCode.S))
+        {
+            animator.SetBool("pistolWalkB", true);
+            //animator.SetBool("walkingW", false);
         }
+        else
+        {
+            animator.SetBool("pistolWalkB", false);
+        }
+
+    }
     }
