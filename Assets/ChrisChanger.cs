@@ -98,6 +98,43 @@ public class ChrisChanger : MonoBehaviour {
         {
             animator.SetBool("pistolWalkB", false);
         }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            animator.SetBool("crouch", true);
+        }
+        if(Input.GetKeyDown(KeyCode.X))
+        {
+            animator.SetBool("crouch", false);
+        }
+       
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.C))
+        {
+            animator.SetBool("crouchW", true);
+        }
+        else
+        {
+            animator.SetBool("crouchW", false);
+        }
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.C))
+        {
+            animator.SetBool("crouchS", true);
+        }
+        else
+        {
+            animator.SetBool("crouchS", false);
+        }
+        if (Input.GetKey(KeyCode.W)&&Input.GetKey(KeyCode.LeftShift))
+        {
+            animator.SetBool("crouchR", true);
+        }
+        else
+        {
+            animator.SetBool("crouchR", false);
+        }
 
+    }
+    public void Crouched()
+    {
+         animator.SetBool("couch", true);
     }
     }
